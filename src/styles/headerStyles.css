@@ -1,0 +1,48 @@
+/* Header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: #fff;
+  z-index: 1000;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu-item {
+  margin: 0 10px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.header-link:hover {
+  color: #00bcd4;
+}

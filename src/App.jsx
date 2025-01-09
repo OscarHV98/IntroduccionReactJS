@@ -1,12 +1,19 @@
 import './App.css'
-import Default from './components/Default'
+// import Default from './components/Default'
+import Header from './components/Header'
+import Body from './components/Home/Body'
+import Footer from './components/Home/Footer'
+import Logo from './components/Home/Logo'
 
-function App() {
-
+const App = () => {
 
   return (
     <>
-        <Default/>
+      <Header/>
+      {/* <Default/> */}
+      <Logo/>
+      <Body/>
+      <Footer/>
     </>
   )
 }
