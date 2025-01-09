@@ -1,0 +1,9 @@
+.mtop30 {
+    margin-top: 30px;
+}
+
+.content-link {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
