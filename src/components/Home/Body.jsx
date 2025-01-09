@@ -14,8 +14,6 @@ const Body = () => {
                 </button>
             </div>
         </div>
-
-        
     );
 };
 
