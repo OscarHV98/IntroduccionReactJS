@@ -4,12 +4,14 @@ import '../../styles/stylesCounter.css';
 
 export const Counter = () => {
   const count = useSelector((state) => state.counter.value);
+  const isLogged = useSelector((state) => state.counter.isLogged);
   const dispatch = useDispatch();
 
   return (
     <div className="counter-container">
-        
+
     <span className="counter-value">{count}</span>
+    <span className="counter-value">{isLogged ? "True" : "False"}</span>
 
     <div className="counter-buttons">
       <button

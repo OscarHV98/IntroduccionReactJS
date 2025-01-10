@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {  // Aca se define todas las variables globales
   value: 0,
+  isLogged: false,
 }
 
 export const counterSlice = createSlice({
