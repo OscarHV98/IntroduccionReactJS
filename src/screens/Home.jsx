@@ -14,7 +14,6 @@ const Home = () =>{
     const count = useSelector((state) => state.counter.value);
     return (
         <div className="mtop30">
-            <span className="counter-value">Count Value: {count}</span>
             <Header/>
             {/* <Logo/>
             <Github/> */}
@@ -23,6 +22,9 @@ const Home = () =>{
                 <OpenLink redirectURL="https://react.dev" logoImage={reactLogo}/>
                 <OpenLink redirectURL="https://github.com/OscarHV98/IntroduccionReactJS" logoImage={githubLogoDos}/>
             </div>
+
+            <span className="counter-value">Count Value: {count}</span>
+
             <Body/>
             <Footer/>
         </div>

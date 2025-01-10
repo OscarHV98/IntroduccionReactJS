@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../store/features/conter/CounterSlice'
+import { decrement, increment, toggleIsLogged } from '../../store/features/conter/CounterSlice'
 import '../../styles/stylesCounter.css';
 
 export const Counter = () => {
@@ -28,6 +28,16 @@ export const Counter = () => {
       >
         Decrement
       </button>
+    </div>
+
+    <div className="counter-buttons">
+        <button
+          className="counter-button"
+          aria-label="Toggle isLogged"
+          onClick={() => dispatch(toggleIsLogged())}
+        >
+          Cambiar Estado
+        </button>
     </div>
   </div>
   );
