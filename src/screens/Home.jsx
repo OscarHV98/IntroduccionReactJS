@@ -8,10 +8,13 @@ import viteLogo from '../assets/vite.svg';
 import reactLogo from '../assets/react.svg';
 import githubLogoDos from '../assets/githubDos.svg';
 import '../styles/styles.css';
+import { useSelector } from "react-redux";
 
 const Home = () =>{
+    const count = useSelector((state) => state.counter.value);
     return (
         <div className="mtop30">
+            <span className="counter-value">Count Value: {count}</span>
             <Header/>
             {/* <Logo/>
             <Github/> */}
