@@ -8,7 +8,6 @@ import viteLogo from '../assets/vite.svg';
 import reactLogo from '../assets/react.svg';
 import githubLogoDos from '../assets/githubDos.svg';
 import '../styles/styles.css';
-import { Counter } from "../components/Counter/Counter";
 
 const Home = () =>{
     return (
@@ -22,7 +21,6 @@ const Home = () =>{
                 <OpenLink redirectURL="https://github.com/OscarHV98/IntroduccionReactJS" logoImage={githubLogoDos}/>
             </div>
             <Body/>
-            <Counter/>
             <Footer/>
         </div>
     );
