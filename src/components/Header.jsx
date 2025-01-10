@@ -1,14 +1,14 @@
 // Header.jsx
 import React from 'react';
-import '../styles/headerStyles.css';
+import '../styles/stylesHeader.css';
 import LogoReact from '../assets/logoReact.svg';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header-logo"> 
-          <a href="/" target="_blank"><img src={LogoReact} className="logo react" alt="React logo" /></a> 
-          <span>Mi Proyecto REACT JS</span>
+        <a href="/" target="_blank"><img src={LogoReact} className="logo react" alt="React logo" /></a> 
+              <span>Mi Proyecto REACT JS</span>
         </div>
       <nav className="header-nav">
         <ul className="header-menu">
