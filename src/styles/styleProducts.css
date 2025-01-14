@@ -1,0 +1,76 @@
+/* Card products */
+.card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Container */
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Input */
+  .search-input {
+    width: 70%;
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #ffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Stock Filter */
+  .stock-filter {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+  }
+  
+  .stock-filter input {
+    margin-right: 5px;
+  }
+  
+  /* Product Table */
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Product Name Styles */
+  .stocked {
+    color: #333;
+  }
+  
+  .disabled-stock {
+    color: #ff0000;
+  }
+  
