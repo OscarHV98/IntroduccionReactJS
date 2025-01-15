@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  productos: [
+  initialValue: 10,
+  
+  dataProduct: [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
     { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
     { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
@@ -9,22 +11,30 @@ const initialState = {
     { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
     { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
   ],
+
   filterText: '',
   inStock: false,
+
 };
 
 export const productSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {
-    setFilterText: (state, action) => {
+    setInitialValue: (state, payload) => {
+      state.initialValue = payload;
+    },
+
+    setFilter: (state, action) => {
       state.filterText = action.payload;
     },
+
     setInStock: (state) => {
       state.inStock = !state.inStock;
     },
   },
 });
 
-export const { setFilterText, setInStock } = productSlice.actions;
+export const { setFilter, setInStock, setInitialValue } = productSlice.actions;
+
 export default productSlice.reducer;

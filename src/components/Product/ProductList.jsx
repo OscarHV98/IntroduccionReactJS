@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setFilterText, setInStock } from '../../store/features/product/ProductSlice';
+import { setFilter, setInStock } from '../../store/features/product/ProductSlice';
 import '../../styles/styleProducts.css';
 
 export const ProductList = () => {
   const dispatch = useDispatch();
-  const { productos, filterText, inStock } = useSelector((state) => state.product);
+  const { dataProduct, filterText, inStock,} = useSelector((state) => state.product);
 
-  const filteredProducts = productos.filter((product) => {
+  const filteredProducts = dataProduct.filter((product) => {
     const filter = product.name.toLowerCase().includes(filterText.toLowerCase());
     const stock = inStock ? product.stocked : true;
     return filter && stock;
@@ -21,7 +21,7 @@ export const ProductList = () => {
           className="search-input"
           placeholder="Buscar productos..."
           value={filterText}
-          onChange={(e) => dispatch(setFilterText(e.target.value))}
+          onChange={(e) => dispatch(setFilter(e.target.value))}
         />
         <label className="stock-filter">
           <input
@@ -38,6 +38,7 @@ export const ProductList = () => {
             <th>Nombre</th>
             <th>Categoría</th>
             <th>Precio</th>
+            <th>Disponibles</th>
           </tr>
         </thead>
         <tbody>
@@ -51,6 +52,9 @@ export const ProductList = () => {
               </td>
               <td className={product.stocked ? 'stocked' : 'disabled-stock'}>
                 {product.price}
+              </td>
+              <td className={product.stocked ? 'stocked' : 'disabled-stock'}>
+                {product.stocked ? 'Disponible' : 'Sin Stock'}
               </td>
             </tr>
           ))}
