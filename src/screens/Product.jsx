@@ -1,10 +1,10 @@
-import { ProductList } from "../components/Product/ProductList";
+import { FilterableProductTable } from "../components/Product/FilterableProductTable";
+import '../styles/styleProducts.css';
 
-// src/screens/Product.jsx
 export const Product = () => {
   return (
     <>
-        <ProductList/>
+        <FilterableProductTable/>
     </>
   );
 };
