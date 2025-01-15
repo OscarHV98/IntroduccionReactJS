@@ -1,5 +1,4 @@
 import OpenLink from "../components/Core/OpenLink";
-import Header from "../components/Header";
 import Body from "../components/Home/Body";
 import Footer from "../components/Home/Footer";
 // import Github from "../components/Home/Github";
@@ -14,7 +13,6 @@ const Home = () =>{
     const count = useSelector((state) => state.counter.value);
     return (
         <div className="mtop30">
-            <Header/>
             {/* <Logo/>
             <Github/> */}
             <div className="content-link">

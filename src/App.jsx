@@ -1,16 +1,14 @@
 import './App.css'
-import { Counter } from './components/Counter/Counter'
-import Home from './screens/Home'
-import { Product } from './screens/Product'
+import Navigator from './components/Navigation/Navigator'
+import Router from './components/Navigation/Router'
 
 
 const App = () => {
 
   return (
     <>
-      {/* <Home/>
-      <Counter/> */}
-      <Product/>
+      <Navigator />
+      <Router/>
     </>
   )
 }
