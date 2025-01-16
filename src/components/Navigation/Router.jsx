@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router";
 import Home from '../../screens/Home';
 import { Counter } from '../Counter/Counter';
 import { Product } from '../../screens/Product';
-import Navigator from './Navigator';
 import About from '../../screens/About';
 import Think from '../../screens/Think';
+import Login from '../../screens/Login';
 
 
 const Router = () => {
@@ -17,6 +17,7 @@ const Router = () => {
                 <Route path="/product" element={<Product />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/think" element={<Think />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
         </>
     );

@@ -16,6 +16,7 @@ const Navigator = () => {
         <Link to="/product" className="header-link">Productos</Link>  
         <Link to="/about" className="header-link">About</Link>  
         <Link to="/think" className="header-link">Think</Link>  
+        <Link to="/login" className="header-link">Login</Link>  
       </nav>
     </header>
   );
