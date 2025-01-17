@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import useForm from "../Hooks/useForm";
 import '../../styles/stylesLogin.css'
+import { useState } from "react";
+import ModalInfo from "../Modals/ModalInfo";
 
 const FormWithMotionAndHook = ({ titleForm }) => {
     const { formData, handleChange } = useForm({
@@ -8,18 +10,34 @@ const FormWithMotionAndHook = ({ titleForm }) => {
         email: ''
     });
 
+    const [openModal, setOpenModal] = useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        console.log('datos: ', formData);
+        setOpenModal(true);
     };
 
+    const onCloseModalInfo = () => {
+        setOpenModal(false);
+    };
+    
+
     return (
+        <>
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
+
+        <ModalInfo 
+            visible={openModal} 
+            message={`"Formulario Enviado!!!!" , ${formData.username} , ${formData.email}`}
+            onClose={() => onCloseModalInfo()}
+        />
+
             <form onSubmit={handleSubmit} className="form-content">
                 <motion.div
                     initial={{ x: -100 }}
@@ -28,6 +46,8 @@ const FormWithMotionAndHook = ({ titleForm }) => {
                 >
                     <h3>{titleForm}</h3>
                 </motion.div>
+
+                
 
                 <motion.div
                     initial={{ y: -20 }} 
@@ -76,6 +96,7 @@ const FormWithMotionAndHook = ({ titleForm }) => {
                 </motion.div>
             </form>
         </motion.div>
+        </>
     );
 };
 
