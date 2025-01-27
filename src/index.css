@@ -92,3 +92,9 @@ button:focus-visible {
     font-size: 0.9em;
   }
 }
+
+
+/* Ajuste para que el header no herede estilos globales */
+.landingPage {
+  all: unset; /* Resetea los estilos heredados */
+}
